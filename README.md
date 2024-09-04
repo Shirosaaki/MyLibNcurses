@@ -4,6 +4,10 @@
 
 This is a mini library that simplifies the usage of the ncurses library in C.
 
+## Compilation
+
+To compile, simply run ```make```. When compiling your code, you can add: ```-L<pathToThisLib> -lmyncurses -lncurses```
+
 ## Functions
 
 ### N_INIT
@@ -76,3 +80,14 @@ The prototype is:
 void n_print_with_color_at(char *str, int color, int x, int y)
 ```
 
+### N_GETLINE
+
+This function captures input from the user.
+
+The prototype is:
+
+```
+char *n_getline(char *str, int size)
+```
+
+The size parameter is used for memory allocation. If you've already allocated memory for str, pass 0. If str is not yet allocated, specify the size you want to allocate.
